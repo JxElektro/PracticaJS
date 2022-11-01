@@ -160,8 +160,22 @@ numeros.forEach(function(numero,index) { // recorre el array
 const persona = {
     nombre: 'Juan',
     profesion: 'Desarrollador Web',
-    edad: 500
+    edad: 500,
+    contacto: {
+        email:'juan@gmail.com',
+        telefono: '123456789',
+        movil: '987654321'
+      },
+    musica: ['Trance', 'Rock', 'Electronica'],
+    hogar: {
+        ciudad: 'Bogota',
+        pais: 'Colombia'
+    },
+    saludar:function() {
+        return `Hola, me llamo ${this.nombre} y soy ${this.profesion}`; // this hace referencia al objeto
+    }
 }
+
 
 console.log(persona.nombre); // accede a la propiedad nombre del objeto persona
 console.log(persona['profesion']); // accede a la propiedad profesion del objeto persona
@@ -169,3 +183,92 @@ console.log(persona.edad); // accede a la propiedad edad del objeto persona
 
 // destructuring
 
+console.log(persona.saludar()); // accede a la propiedad saludar del objeto persona
+console.log(persona.contacto.email); // accede a la propiedad contacto del objeto persona
+console.log(persona.musica[1]); // accede a la propiedad musica del objeto persona
+console.log(persona.contacto.movil); // accede a la propiedad contacto del objeto persona
+
+// operadores de comparacion
+
+const numero1 = 20;
+const numero2 = 50;
+const numero3 = '20';
+
+console.log(numero1 > numero2); // false
+console.log(numero1 < numero2); // true
+console.log(numero1 == numero3); // true
+console.log(numero1 === numero3); // false
+console.log(numero1 != numero3); // false
+console.log(numero1 !== numero3); // true
+
+// operadores logicos
+const password1 = 'admin';
+const password2 = 'admin';
+
+if(password1 === 'admin' && password2 === 'admin') { // && significa y
+    console.log('Ambos passwords son correctos');
+}
+
+if(password1 === 'admin' || password2 === 'admin') { // || significa o
+    console.log('Al menos uno de los passwords es correcto');
+}
+
+// operador ternario
+const autenticado = true;
+console.log(autenticado ? 'Si esta autenticado' : 'No esta autenticado'); // si autenticado es true imprime el primer valor, si es false imprime el segundo valor
+
+// switch
+const metodoPago = 'efectivo';
+
+switch(metodoPago) {
+    case 'efectivo':
+        console.log(`El usuario pago con ${metodoPago}`);
+        break;
+    case 'cheque':
+        console.log(`El usuario pago con ${metodoPago}`);
+        break;
+    case 'tarjeta':
+        console.log(`El usuario pago con ${metodoPago}`);
+        break;
+    default:
+        console.log('Metodo de pago no soportado');
+        break;
+}
+
+// operador de decremento y incremento
+let puntaje = 5;
+
+// incremento
+puntaje++;
+console.log(puntaje);
+
+// decremento
+puntaje--;
+console.log(puntaje);
+
+// incremento de 2 en 2
+puntaje += 2;
+console.log(puntaje);
+
+// decremento de 2 en 2
+puntaje -= 2;
+console.log(puntaje);
+
+// estructuras de control
+
+// if
+const edad = 20;
+
+if(edad > 18) {
+    console.log('Es mayor de edad');
+} else {
+    console.log('Es menor de edad');
+}
+
+//Operador ternario multiple
+const logueado = true;
+console.log(logueado === true ? 'El usuario esta autenticado' : 'El usuario no esta autenticado');
+
+// sigue el video 15
+
+ // https://www.youtube.com/watch?v=AapgtR0Rwk0&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=16
