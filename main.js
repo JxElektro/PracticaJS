@@ -116,3 +116,56 @@ function saludar3(nombre) {
     return `Hola ${nombre}`;
 }
 console.log(saludar3('Pedro'));
+
+// funcions con parametros por defecto
+
+function saludar4(nombre = 'Juan') {
+    return `Hola ${nombre}`;
+}
+
+// funcion expresada
+
+const saludar5 = function(nombre = 'Juan') {
+    return `Hola ${nombre}`;
+}
+
+// funcion flecha
+
+const saludar6 = (nombre = 'Juan') => {
+    return `Hola ${nombre}`;
+}
+
+// funcion flecha con un solo parametro
+
+const saludar7 = nombre => {
+    return `Hola ${nombre}`;
+}
+
+// ---------------------------------
+
+// arrays
+
+const numeros = [10, 20, 30, 40, 50]; // array de numeros
+console.log(numeros.length); // determina la longitud del array
+console.log(numeros[0]); // accede al primer elemento del array
+console.log(numeros[4]); // accede al ultimo elemento del array
+console.log(numeros[5]); // undefined porque no existe el elemento 5
+
+numeros.forEach(function(numero,index) { // recorre el array
+    console.log(`<li id="${index}" >${numero}</li>`); // imprime el elemento y su posicion
+});
+
+// objetos
+
+const persona = {
+    nombre: 'Juan',
+    profesion: 'Desarrollador Web',
+    edad: 500
+}
+
+console.log(persona.nombre); // accede a la propiedad nombre del objeto persona
+console.log(persona['profesion']); // accede a la propiedad profesion del objeto persona
+console.log(persona.edad); // accede a la propiedad edad del objeto persona
+
+// destructuring
+
